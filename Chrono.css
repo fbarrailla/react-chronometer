@@ -1,0 +1,60 @@
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+html {
+  background-color: rgba(0, 0, 0, .1);
+  text-align: center;
+}
+
+head,
+title {
+  display: block;
+}
+
+title {
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+.Chrono {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 20px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0px 0px 1px 0px #656565;
+}
+.Chrono h1 {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 10px 40px;
+  background-color: rgba(51, 178, 202, .3);
+  font-size: 40px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+.Chrono h1:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 33px;
+  background: rgba(255, 255, 255, .2);
+}
+
+.Chrono .buttons {
+  margin-top: 20px;
+}
+.Chrono button {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  border-bottom: 2px solid rgba(0, 0, 0, .2);
+}
+.Chrono button + button {
+  margin-left: 10px;
+}
+.Chrono button:hover {
+  border-bottom-color: #000;
+}

@@ -12,6 +12,18 @@ var Chrono = React.createClass({
     };
   },
 
+  componentDidMount: function() {
+    window.addEventListener('keydown', this.onKeyDown);
+  },
+
+  onKeyDown: function(evt){
+    evt.preventDefault();
+    // start|stop on [space]
+    evt.keyCode === 32 && this[!this.state.startTS ? 'start' : 'stop']();
+    // reset on [escape]
+    evt.keyCode === 27 && this.reset();
+  },
+
   start: function(){
     if (this.state.startTS) {
       // prevent multi clicks on start
